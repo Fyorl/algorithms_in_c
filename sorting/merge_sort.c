@@ -13,7 +13,6 @@ int * merge(int * arr1, int * arr2, int len1, int len2) {
   return res;
 }
 
-// Currently broken... sorting it out
 int * merge_sort(int * arr, int size) {
   if(size <= 1)
     return arr;
@@ -22,6 +21,5 @@ int * merge_sort(int * arr, int size) {
   int l_half = r_half + size % 2;
 
   return merge(merge_sort(arr, l_half),
-	       merge_sort((arr + l_half - 1), r_half),
-	       l_half, r_half);
+	       merge_sort(arr + l_half, r_half), l_half, r_half);
 }
