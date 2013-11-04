@@ -6,9 +6,8 @@ int * merge(int * arr1, int * arr2, int len1, int len2) {
   int * res = (int *) malloc(sizeof(int) * (len1 + len2));
 
   for(i = 0, j = 0; i < len1 || j < len2; )
-    (i < len1 && (j >= len2 || arr1[i] <= arr2[j]))?
-      ((res[i+j] = arr1[i]) && ++i) :
-      ((res[i+j] = arr2[j]) && ++j);
+    res[i+j] = (i < len1 && (j >= len2 || arr1[i] <= arr2[j]))?
+      arr1[i++] : arr2[j++];
 
   return res;
 }

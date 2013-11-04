@@ -1,2 +1,2 @@
 all:
-	gcc -Wall sorting/main.c
+	gcc sorting/main.c
