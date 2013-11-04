@@ -9,7 +9,7 @@ void assert_values(int * arr1, int * arr2, int len) {
     assert(arr1[i] == arr2[i]);
 }
 
-void inspect_arr(int * arr, int len) {
+void inspect_array(int * arr, int len) {
   int i;
   for(i = 0; i < len; ++i) {
     printf("%d", arr[i]);
